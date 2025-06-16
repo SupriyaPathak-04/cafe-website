@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Lavender Latte</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Lavender Latte</h1>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#order">Order</a></li>
+
+    </ul>
+</header>
+
+<section id="home">
+  <h2 style="color:purple"><u><b>Welcome to Lavender Latte</b></u></h2>
+  <p style="color:#333333">Enjoy a relaxing coffee experience.</p>
+</section>
+
+<section id="about">
+  <h2 style="color:purple">About Us</h2>
+  <p style="color:#333333"> A café where calm meets comfort, and every sip tells a story.
+Inspired by the gentle charm of lavender blooms, our café was born from a simple idea: to create a warm, welcoming space where people can slow down, savor the moment, and feel at home. Whether you’re starting your day with a perfectly brewed cup of coffee or winding down with one of our signature lavender-infused drinks, each visit to Lavender is a little escape from the everyday.</p>
+</section>
+
+<img src="https://i.pinimg.com/originals/83/5a/95/835a95d63a7caf1ce6d3609f8f52a94d.jpg" height="350" >
+<img src="https://www.foxandbriar.com/wp-content/uploads/2016/06/Lavender-Latte-13-of-13.jpg" height="350">
+<img src="https://chocolatecoveredkatie.com/wp-content/uploads/2020/05/Easy-Vegan-Blueberry-Muffins.jpg" height="350">
+
+<section id="menu">
+  <h2 style="color:purple">Our Menu ☕</h2>
+  <p style="color:#333333">Explore our delicious drinks and snacks!</p>
+
+  <div class="menu-section">
+    <h3>Coffee Creations</h3>
+    <ul>
+      <li><strong>Classic Espresso</strong> – Bold and rich, served straight up</li>
+      <li><strong>Cappuccino</strong> – Perfect balance of espresso, milk, and foam</li>
+      <li><strong>Vanilla Latte</strong> – Creamy with a hint of sweet vanilla</li>
+      <li><strong>Caramel Macchiato</strong> – Smooth layers of caramel and espresso</li>
+    </ul>
+  </div>
+
+  <div class="menu-section">
+    <h3>Lavender Specials</h3>
+    <ul>
+      <li><strong>Lavender Latte</strong> – Our signature drink, floral and comforting</li>
+      <li><strong>Iced Lavender Honey Latte</strong> – Lightly sweet, chilled perfection</li>
+      <li><strong>Lavender Mocha</strong> – Rich chocolate with a floral twist</li>
+      <li><strong>Lavender Matcha</strong> – Earthy matcha with soft lavender notes</li>
+    </ul>
+  </div>
+
+  <div class="menu-section">
+    <h3>Pastries & Bites</h3>
+    <ul>
+      <li><strong>Butter Croissant</strong> – Flaky and golden</li>
+      <li><strong>Lavender Shortbread Cookies</strong> – Delicately floral and sweet</li>
+      <li><strong>Almond Cake Slice</strong> – Moist with a nutty finish</li>
+      <li><strong>Blueberry Muffin</strong> – Bursting with fresh berries</li>
+    </ul>
+  </div>
+
+  <div class="menu-section">
+    <h3>Iced & Cold Brews</h3>
+    <ul>
+      <li><strong>Cold Brew Coffee</strong> – Smooth and bold, served cold</li>
+      <li><strong>Iced Vanilla Latte</strong> – Refreshing and lightly sweet</li>
+      <li><strong>Iced Chai Latte</strong> – Spiced and creamy</li>
+      <li><strong>Lavender Lemonade</strong> – Zesty citrus with a floral twist</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 style="color:purple">Contact Us</h2>
+  <p style="color:#333333">Get in touch for any inquiries.</p>
+  <p style="color:#333333">E-mail:lavavender123@gmail.com</p>
+  <p style="color:#333333">tele-phone ☎️: 1001-1901-1234</p>
+</section>
+<script>
+  document.getElementById('orderForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent actual form submission
+
+    const name = document.getElementById('name').value;
+    const item = document.getElementById('item').value;
+    const quantity = document.getElementById('quantity').value;
+
+    const message = `Thank you, ${name}! Your order for ${quantity} ${item}(s) has been received.`;
+    const confirmation = document.getElementById('confirmationMessage');
+    confirmation.textContent = message;
+    confirmation.style.display = 'block';
+
+    // Optional: Clear form
+    this.reset();
+  });
+</script>
+<section id="order">
+  <h2 style="color:purple">Place Your Order</h2>
+  <p style="color:#333333">Order your favorite drinks and pastries below:</p>
+
+  <form id="orderForm">
+    <label for="name" style="color:#333333">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email" style="color:#333333">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="item" style="color:#333333">Select Item:</label><br>
+    <select id="item" name="item" required>
+      <option value="">--Choose an item--</option>
+      <option value="Lavender Latte">Lavender Latte</option>
+      <option value="Iced Lavender Honey Latte">Iced Lavender Honey Latte</option>
+      <option value="Lavender Mocha">Lavender Mocha</option>
+      <option value="Butter Croissant">Butter Croissant</option>
+      <option value="Blueberry Muffin">Blueberry Muffin</option>
+    </select><br><br>
+
+    <label for="quantity" style="color:#333333">Quantity:</label><br>
+    <input type="number" id="quantity" name="quantity" min="1" max="10" required><br><br>
+
+    <button type="submit">Place Order</button>
+  </form>
+
+  <p id="confirmationMessage" style="color:green; display:none; font-weight:bold;"></p>
+</section>
+
+</body>
+</html>
+
